@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en" class="details">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="css/base-new.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/common-new.css" />
+    <link rel="stylesheet" type="text/css" href="css/product.css" />
+	<link rel="stylesheet" type="text/css" href="css/main-new.css" />
+	<title>产品详情页</title>
+	<style>
+		.instructions{
+			border-top: 1px solid #a9c6c9;
+			border-left: 1px solid #a9c6c9;
+		}
+		.instructions td{
+			padding: 10px;
+			border-right: 1px solid #a9c6c9;
+			border-bottom: 1px solid #a9c6c9;
+			line-height: 16px;
+		}
+		.instructions td:first-child{
+			width: 145px;
+		}
+		.instructions td[colspan]{
+			text-align: center;
+		}
+		.instructions tr:nth-child(odd){
+			background-color: #f5fafa;
+		}
+		.instructions tr:first-child td{
+			color: red;
+			font-size: 18px;
+		}
+
+	</style>
+
+	<style>
+		.swiper-container.swiper-tabs{
+			height: 48px !important;
+			background-color: #f6f6f6 !important;
+			font-size: 14px !important;
+			border-bottom: 1px solid #e0e0e0 !important;
+		}
+		.swiper-container.swiper-tabs .swiper-slide{
+			width: 150px !important;
+			height: 44px !important;
+			line-height: 44px !important;
+			background: none !important;
+		}
+
+		.swiper-tabs .swiper-slide a{
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-tabs .swiper-slide.active a{
+			background-color: #fff;
+			height: 43px;
+			line-height: 44px;
+			margin-left: -1px;
+			margin-top: -1px;
+			border-right: 1px solid #e0e0e0;
+			border-left: 1px solid #e0e0e0;
+			border-bottom: 1px solid #fff;
+			border-top: 3px solid #04aa58;
+			color: #04aa58;
+		}
+
+		.swiper-container.swiper-suit .swiper-slide:nth-child(odd){
+			width: 190px !important;
+			height: 240px !important;
+		}
+		.swiper-container.swiper-suit .swiper-slide:nth-child(even){
+			width: 58px !important;
+			height: 240px !important;
+		}
+
+	</style>
+</head>
+<body style="background-color: #fff;">
+	<section class="section-1">
+		<div class="center-box">
+            <h3>您好，欢迎来到好万家网上药店！<span>登录</span><span>免费注册</span></h3>
+			<div class="top-layout">
+				<span class="login"><a href="javascript:;"></a>会员中心</a></span>
+				<span class="register"><a href="javascript:;">个人中心</a></span>
+				<span class="palm"><a href="javascript:;">手机客户端</a></span>
+				<span class="web-map"><a href="javascript:;">网站导航</a></span>
+				<span class="phone-service">客服电话：0662-2932183</span>
+			</div>
+		</div>
+	</section>
+	<section class="section-2">
+		<div class="center-box">
+			<i id="logo">
+                <img src="images/logo.png"/>
+                <P>互联网药品交易服务资格证：<span>粤C20150023</span></P>
+			</i>
+			<div class="search-sec">
+
+				<form action="" method="get" class="search-form">
+					<i class="search-icon"></i>
+					<input type="text" placeholder="六味地黄丸" class="search-input" name="search-input"/>
+					<button id="search-btn" class="search-btn" type="button">搜索</button>
+				</form>
+
+				<div class="search-menu">
+					<a href="javascript:void(0);">肾宝片</a>
+					<a href="javascript:void(0);">六味地黄丸</a>
+					<a href="javascript:void(0);">血压计</a>
+					<a href="javascript:void(0);">益安宁丸</a>
+					<a href="javascript:void(0);">肾安片</a>
+				</div>
+				<div class="cart">
+                    <i><img src="images/头部-导航-购物车.png"/></i>
+                    <span>购物车<em>3</em></span>
+                </div>
+                <div class="cart coupon">
+                    <i><img src="images/头部-导航-优惠券.png"/></i>
+                    <span>优惠卷<em>3</em></span>
+                </div>
+			</div>
+		</div>
+	</section>
+	<section class="section-3-menu">
+		<div class="home-menu">
+			<div class="home-center-ctrl">
+				<div class="home-menu-inner">
+					<em class="hover-move"></em>
+					<a data-index="1" class="active" href="javascript:void(0);" target="_blank">首页</a>
+					<a data-index="2" href="javascript:void(0);" target="_blank">自助找药</a>
+					<a data-index="3" href="javascript:void(0);" target="_blank">男性专区</a>
+					<a data-index="4" href="javascript:void(0);" target="_blank">女性专区</a>
+					<a data-index="5" href="javascript:void(0);" target="_blank">中药饮片</a>
+					<a data-index="6" href="javascript:void(0);" target="_blank">成人用品</a>
+					<a data-index="7" href="javascript:void(0);" target="_blank">活动专区</a>
+				</div>
+				<!-- 折叠菜单 -->
+				<div class="menu-zhedie">
+					<div class="showall"><i class="menu-all-icon"></i>全部商品分类</div>
+					<div class="show-content active">
+						<div class="show-list" data-index="1">
+							<h3 class="menu-li"><i class="menu-zxyp-icon"></i> 中西药品 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管11</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;" class="hot">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管22</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+
+						<div class="show-list" data-index="2">
+							<h3 class="menu-li"><i class="menu-ylqx-icon"></i> 医疗器械 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+
+						<div class="show-list" data-index="3">
+							<h3 class="menu-li"><i class="menu-zyyp-icon"></i> 中药饮片 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+
+						<div class="show-list" data-index="4">
+							<h3 class="menu-li"><i class="menu-bjsp-icon"></i> 保健食品 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+						<div class="show-list" data-index="5">
+							<h3 class="menu-li active"><i class="menu-jjry-icon"></i> 家居日用 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+						<div class="show-list" data-index="6">
+							<h3 class="menu-li"><i class="menu-zbp-icon"></i> 滋补品 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+						<div class="show-list" data-index="7">
+							<h3 class="menu-li"><i class="menu-cryp-icon"></i> 成人用品 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+						<div class="show-list" data-index="8">
+							<h3 class="menu-li"><i class="menu-ykyy-icon"></i> 眼科用药 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="palm-speed">
+			<div class="speed-menu">
+				<span>
+					<i class="speed-i-1"></i>
+					<em>正品保证</em>
+				</span>
+				<span>
+					<i class="speed-i-2"></i>
+					<em>满88包邮</em>
+				</span>
+				<span>
+					<i class="speed-i-3"></i>
+					<em>品牌授权</em>
+				</span>
+				<span>
+					<i class="speed-i-4"></i>
+					<em>专业药师</em>
+				</span>
+				<span>
+					<i class="speed-i-5"></i>
+					<em>实体连锁</em>
+				</span>
+				<span>
+					<i class="speed-i-6"></i>
+					<em>快速审核</em>
+				</span>
+			</div>
+			<div class="speed-ewm">
+				<img src="images/banner-ewm.jpg"/>
+				<p>手机端购药更方便</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- 以上是公共部分 -->
+	<section class="bread-menu">
+		<i class="home-icon"></i>
+		<a href="javascript:;"><span>首页</span></a>
+		<a href="javascript:;"><span>中西药品</span></a>
+		<a href="javascript:;"><span>消化系统疾病</span></a>
+		<a href="javascript:;"><span>小儿肠胃病</span></a>
+		<a href="javascript:;" class="active"><span>恩甘定 恩替卡韦胶囊 0.5mg*7粒</span></a>
+	</section>
+	<section class="product-show-sec  clearfix">
+		<div class="store-gooods"><span class="store-goods-text">收藏该商品</span></div>
+		<div class="product-show-lf">
+			<!-- 产品图片放大 -->
+			<div id="magnifier">
+			    <div class="small-box">
+			      <img src="images/small_1.jpg" alt="#">
+			      <span class="hover"></span>
+			    </div>
+			    <div class="thumbnail-box">
+			      <div class="list">
+			        <ul class="wrapper">
+			          <li class="item item-cur" data-src="images/small_1.jpg"><img src="images/thumbnail_1.jpg" alt="#"></li>
+			          <li class="item" data-src="images/small_2.jpg"><img src="images/thumbnail_2.jpg" alt="#"></li>
+			          <li class="item" data-src="images/small_3.jpg"><img src="images/thumbnail_3.jpg" alt="#"></li>
+			          <li class="item" data-src="images/small_4.jpg"><img src="images/thumbnail_4.jpg" alt="#"></li>
+			          <li class="item" data-src="images/small_5.jpg"><img src="images/thumbnail_5.jpg" alt="#"></li>
+			          <li class="item" data-src="images/small_6.jpg"><img src="images/thumbnail_6.jpg" alt="#"></li>
+			        </ul>
+			      </div>
+			    </div>
+			    <div class="big-box">
+			    	<i><img src="images/big_1.jpg" alt="#"></i>
+			    </div>
+              </div>
+
+            <div class="commodity-code">
+                <span>商品编码：390390521</span>
+            </div>
+
+            <ul class="product-message">
+                <li class="recommend-message">
+                    <span>温馨提示：</span>图片均为好万家对原品的真实拍摄，仅供参考；如遇新包装上市可能存在上新滞后，请以实物为准。
+                </li>
+                <li class="prescription-message">
+                    <img src="images/OTC.png"/>
+                    <span>本品为处方药，您成功预定后，展示药品的药店会根据处方审核结果主动与您联系。（如需协助请拨400-8811-020）</span>
+                </li>
+            </ul>
+		</div>
+		<div class="product-show-rt">
+			<h2><img src="images/OTC.png"/> 恩甘定 恩替卡韦胶囊 0.5mg*7粒</h2>
+			<div class="product-jian">
+				乙肝的治疗不仅要抑制病毒，通常还要提高免疫力，机体才会产生抗体来对抗病毒。机体才会产生抗体来对抗病毒。
+            </div>
+            <div class="product-discount">
+                <div class="product-price">
+                    <span class="lable">售价</span>
+                    <span class="price-num">￥<strong>79.00</strong></span>
+                    <span class="old-price">￥80.00</span>
+                </div>
+                <div class="product-promotion">
+                    <span class="lable">促销</span>
+                    <div class="promotion-message">
+                        <p><span>满返</span><span>2月15号2月15号2月15号2月15号2月15号2月15号2月15号2月15号2月15号2月15号2月15号</span></p>
+						<p><span>折扣</span><span>全场9.38折</span></p>
+						<p><span>免邮</span><span>全场满58元免运费</span></p>
+						<p><span>立减</span><span>首单随机立减</span></p>
+                    </div>
+				</div>
+				<p class="more" data-status="show">收起<i></i></p>
+            </div>
+			<div class="product-infor">
+                <div class="approval-number">
+                    <span class="lable">批准文号</span>
+                    <span class="vender-name">国药准字Z37021392&nbsp;&nbsp;<span>国家食药局查询</span></span>
+                </div>
+				<div class="vender">
+					<span class="lable">生产厂家</span>
+					<span class="vender-name">杭州默沙东制药有限公司 <span>（厂家不定时换包装，具体以实物为准）</span></span>
+				</div>
+				<div class="brand">
+					<span class="lable">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌</span>
+					<span class="brand-name">福善美</span>
+                </div>
+                <div class="offer">
+                    <span class="lable">优&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;惠</span>
+                    <div class="coupon">
+                        <p><span>积分</span>可获得350积分</p>
+                        <ul>
+                            <li class="select-coupon">满499减30 <i></i><i></i></li>
+                            <li class="select-coupon">满499减30 <i></i><i></i></li>
+                            <li class="select-coupon">满499减30 <i></i><i></i></li>
+                            <li class="select-coupon">满499减30 <i></i><i></i></li>
+                        </ul>
+                    </div>
+                </div>
+				<div class="size">
+					<span class="lable">规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</span>
+					<div class="size-list">
+						<em class="active">0.5g*12粒*2板</em>
+						<em class="not-allow">.5g*12粒*2板</em>
+						<em class="not-allow">0.5g*12粒*2板</em>
+						<em>0.5g*12粒*2板</em>
+						<em>0.5g*12粒*2板</em>
+						<em>0.5g*12粒*2板</em>
+						<em>0.5g*12粒*2板</em>
+						<em>0.5g*12粒*2板</em>
+						<em>0.5g*12粒*2板</em>
+					</div>
+				</div>
+				<div class="treatment-offer">
+					<span class="lable">疗程优惠</span>
+					<div class="size-list">
+						<em class="active">20盒起 | 21.00元/盒，160天量</em>
+						<em>20盒起 | 21.00元/盒，160天量</em>
+						<em>20盒起 | 21.00元/盒，160天量</em>
+						<em>20盒起 | 21.00元/盒，160天量</em>
+						<em>20盒起 | 21.00元/盒，160天量</em>
+						<em>20盒起 | 21.00元/盒，160天量</em>
+						<em>20盒起 | 21.00元/盒，160天量</em>
+					</div>
+				</div>
+				<div class="quantity">
+					<span class="lable">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</span>
+					<div class="quantity-add">
+						<em class="min">-</em>
+						<span class="quantity-input"><input type="text" value="1" class="num"/></span>
+						<em class="add">+</em>
+					</div>
+				</div>
+			</div>
+			<div class="need-save" style="display: none">
+				<button class="need-btn" type="button">需求登记</button>
+				<div class="callPhone">
+					<input type="text" placeholder="请输入联系电话" class="doc-qs"/>
+					<button class="call-btn">药师<br/>回拨</button>
+				</div>
+			</div>
+			<div class="need-save-otc">
+				<button class="buy-btn-1 active" type="button">加入需求单</button>
+				<button class="buy-btn-2" type="button">在线咨询</button>
+			</div>
+			<div class="promise">
+				<div class="lable">承&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;诺</div>
+				<ul>
+					<li><img src="images/promise_icon.png"/>正品保证</li>
+					<li><img src="images/promise_icon.png"/>实体连锁</li>
+					<li><img src="images/promise_icon.png"/>药师服务</li>
+					<li><img src="images/promise_icon.png"/>极速审核</li>
+					<li><img src="images/promise_icon.png"/>隐私发货</li>
+					<li><img src="images/promise_icon.png"/>自提</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="efficacy-dec clearfix">
+		<div class="swiper-container swiper-tabs">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide active"><a href="javascript:;">提高免疫力</a></div>
+				<div class="swiper-slide"><a href="javascript:;">提高免疫力</a></div>
+				<div class="swiper-slide"><a href="javascript:;">促进钙吸收</a></div>
+				<div class="swiper-slide"><a href="javascript:;">提高免疫力</a></div>
+				<div class="swiper-slide"><a href="javascript:;">促进钙吸收</a></div>
+				<div class="swiper-slide"><a href="javascript:;">提高免疫力</a></div>
+				<div class="swiper-slide"><a href="javascript:;">促进钙吸收</a></div>
+				<div class="swiper-slide"><a href="javascript:;">提高免疫力</a></div>
+				<div class="swiper-slide"><a href="javascript:;">促进钙吸收</a></div>
+				<div class="swiper-slide"><a href="javascript:;">提高免疫力</a></div>
+				<div class="swiper-slide"><a href="javascript:;">促进钙吸收</a></div>
+				<div class="swiper-slide"><a href="javascript:;">提高免疫力</a></div>
+				<div class="swiper-slide"><a href="javascript:;">促进钙吸收</a></div>
+				<div class="swiper-slide"><a href="javascript:;">提高免疫力</a></div>
+				<div class="swiper-slide"><a href="javascript:;">促进钙吸收</a></div>
+			</div>
+		</div>
+		<div class="efficacy-cont">
+			<div class="efficacy-cont-item active">
+				<div class="product-add">
+					<div class="product-add-lt">
+						<!--这里修改-->
+						<div class="swiper-container swiper-suit">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+							</div>
+						</div>
+						<div class="doc-comment">
+							<div class="title">药师点评:</div>
+							<div class="cont">
+								<h3>促进钙吸收：百花蜂蜜1瓶+钙尔奇D 碳酸钙D3片咀嚼片 1盒</h3>
+								<p>百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。</p>
+							</div>
+						</div>
+					</div>
+					<div class="product-add-rt">
+						<div class="lishen">立省￥<em>1220.00</em><i class="bt-col"></i></div>
+						<div class="taocan">
+							<span class="label">套餐价：</span>
+							<span class="taocan-num">￥<em>34.00</em></span>
+						</div>
+						<div class="taocan-old-price">
+							<span>原价：￥<em>2244.00</em></span>
+						</div>
+						<button class="buy-btn">立即购买</button>
+					</div>
+				</div>
+			</div>
+			<div class="efficacy-cont-item">
+				<div class="product-add">
+					<div class="product-add-lt">
+						<!--这里修改-->
+						<div class="swiper-container swiper-suit">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+							</div>
+						</div>
+						<div class="doc-comment">
+							<div class="title">药师点评:</div>
+							<div class="cont">
+								<h3>促进钙吸收：百花蜂蜜1瓶+钙尔奇D 碳酸钙D3片咀嚼片 1盒</h3>
+								<p>百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。</p>
+							</div>
+						</div>
+					</div>
+					<div class="product-add-rt">
+						<div class="lishen">立省￥<em>1220.00</em><i class="bt-col"></i></div>
+						<div class="taocan">
+							<span class="label">套餐价：</span>
+							<span class="taocan-num">￥<em>34.00</em></span>
+						</div>
+						<div class="taocan-old-price">
+							<span>原价：￥<em>2244.00</em></span>
+						</div>
+						<button class="buy-btn">立即购买</button>
+					</div>
+				</div>
+			</div>
+			<div class="efficacy-cont-item">
+				<div class="product-add">
+					<div class="product-add-lt">
+						<!--这里修改-->
+						<div class="swiper-container swiper-suit">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+							</div>
+						</div>
+						<div class="doc-comment">
+							<div class="title">药师点评:</div>
+							<div class="cont">
+								<h3>促进钙吸收：百花蜂蜜1瓶+钙尔奇D 碳酸钙D3片咀嚼片 1盒</h3>
+								<p>百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。</p>
+							</div>
+						</div>
+					</div>
+					<div class="product-add-rt">
+						<div class="lishen">立省￥<em>1220.00</em><i class="bt-col"></i></div>
+						<div class="taocan">
+							<span class="label">套餐价：</span>
+							<span class="taocan-num">￥<em>34.00</em></span>
+						</div>
+						<div class="taocan-old-price">
+							<span>原价：￥<em>2244.00</em></span>
+						</div>
+						<button class="buy-btn">立即购买</button>
+					</div>
+				</div>
+			</div>
+			<div class="efficacy-cont-item">
+				<div class="product-add">
+					<div class="product-add-lt">
+						<!--这里修改-->
+						<div class="swiper-container swiper-suit">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+							</div>
+						</div>
+						<div class="doc-comment">
+							<div class="title">药师点评:</div>
+							<div class="cont">
+								<h3>促进钙吸收：百花蜂蜜1瓶+钙尔奇D 碳酸钙D3片咀嚼片 1盒</h3>
+								<p>百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。</p>
+							</div>
+						</div>
+					</div>
+					<div class="product-add-rt">
+						<div class="lishen">立省￥<em>1220.00</em><i class="bt-col"></i></div>
+						<div class="taocan">
+							<span class="label">套餐价：</span>
+							<span class="taocan-num">￥<em>34.00</em></span>
+						</div>
+						<div class="taocan-old-price">
+							<span>原价：￥<em>2244.00</em></span>
+						</div>
+						<button class="buy-btn">立即购买</button>
+					</div>
+				</div>
+			</div>
+			<div class="efficacy-cont-item">
+				<div class="product-add">
+					<div class="product-add-lt">
+						<!--这里修改-->
+						<div class="swiper-container swiper-suit">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+							</div>
+						</div>
+						<div class="doc-comment">
+							<div class="title">药师点评:</div>
+							<div class="cont">
+								<h3>促进钙吸收：百花蜂蜜1瓶+钙尔奇D 碳酸钙D3片咀嚼片 1盒</h3>
+								<p>百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。</p>
+							</div>
+						</div>
+					</div>
+					<div class="product-add-rt">
+						<div class="lishen">立省￥<em>1220.00</em><i class="bt-col"></i></div>
+						<div class="taocan">
+							<span class="label">套餐价：</span>
+							<span class="taocan-num">￥<em>34.00</em></span>
+						</div>
+						<div class="taocan-old-price">
+							<span>原价：￥<em>2244.00</em></span>
+						</div>
+						<button class="buy-btn">立即购买</button>
+					</div>
+				</div>
+			</div>
+			<div class="efficacy-cont-item">
+				<div class="product-add">
+					<div class="product-add-lt">
+						<!--这里修改-->
+						<div class="swiper-container swiper-suit">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+							</div>
+						</div>
+						<div class="doc-comment">
+							<div class="title">药师点评:</div>
+							<div class="cont">
+								<h3>促进钙吸收：百花蜂蜜1瓶+钙尔奇D 碳酸钙D3片咀嚼片 1盒</h3>
+								<p>百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。</p>
+							</div>
+						</div>
+					</div>
+					<div class="product-add-rt">
+						<div class="lishen">立省￥<em>1220.00</em><i class="bt-col"></i></div>
+						<div class="taocan">
+							<span class="label">套餐价：</span>
+							<span class="taocan-num">￥<em>34.00</em></span>
+						</div>
+						<div class="taocan-old-price">
+							<span>原价：￥<em>2244.00</em></span>
+						</div>
+						<button class="buy-btn">立即购买</button>
+					</div>
+				</div>
+			</div>
+			<div class="efficacy-cont-item">
+				<div class="product-add">
+					<div class="product-add-lt">
+						<!--这里修改-->
+						<div class="swiper-container swiper-suit">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+							</div>
+						</div>
+						<div class="doc-comment">
+							<div class="title">药师点评:</div>
+							<div class="cont">
+								<h3>促进钙吸收：百花蜂蜜1瓶+钙尔奇D 碳酸钙D3片咀嚼片 1盒</h3>
+								<p>百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。</p>
+							</div>
+						</div>
+					</div>
+					<div class="product-add-rt">
+						<div class="lishen">立省￥<em>1220.00</em><i class="bt-col"></i></div>
+						<div class="taocan">
+							<span class="label">套餐价：</span>
+							<span class="taocan-num">￥<em>34.00</em></span>
+						</div>
+						<div class="taocan-old-price">
+							<span>原价：￥<em>2244.00</em></span>
+						</div>
+						<button class="buy-btn">立即购买</button>
+					</div>
+				</div>
+			</div>
+			<div class="efficacy-cont-item">
+				<div class="product-add">
+					<div class="product-add-lt">
+						<!--这里修改-->
+						<div class="swiper-container swiper-suit">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+							</div>
+						</div>
+						<div class="doc-comment">
+							<div class="title">药师点评:</div>
+							<div class="cont">
+								<h3>促进钙吸收：百花蜂蜜1瓶+钙尔奇D 碳酸钙D3片咀嚼片 1盒</h3>
+								<p>百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。</p>
+							</div>
+						</div>
+					</div>
+					<div class="product-add-rt">
+						<div class="lishen">立省￥<em>1220.00</em><i class="bt-col"></i></div>
+						<div class="taocan">
+							<span class="label">套餐价：</span>
+							<span class="taocan-num">￥<em>34.00</em></span>
+						</div>
+						<div class="taocan-old-price">
+							<span>原价：￥<em>2244.00</em></span>
+						</div>
+						<button class="buy-btn">立即购买</button>
+					</div>
+				</div>
+			</div>
+			<div class="efficacy-cont-item">
+				<div class="product-add">
+					<div class="product-add-lt">
+						<!--这里修改-->
+						<div class="swiper-container swiper-suit">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+								<div class="swiper-slide"><i class="add-icon">+</i></div>
+								<div class="swiper-slide"><div class="goods-cm2-item">
+									<i><img src="images/pro_3.jpg" alt=""/></i>
+									<p>2222钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+									<span>￥<em>22.00</em></span>
+								</div></div>
+							</div>
+						</div>
+						<div class="doc-comment">
+							<div class="title">药师点评:</div>
+							<div class="cont">
+								<h3>促进钙吸收：百花蜂蜜1瓶+钙尔奇D 碳酸钙D3片咀嚼片 1盒</h3>
+								<p>百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。百花蜜是多种花蜜酿成的混合蜂蜜，味甜，营养成分多，蜂蜜中的硼能增加雌激素活性，防止钙的流失；一匙蜂蜜加上适量的钙片，可增加钙的吸收率。同时动物实验证明，蜂蜜有增强肠蠕动的作用，可显著缩短排便时间，减轻钙片致便秘的不良反应。</p>
+							</div>
+						</div>
+					</div>
+					<div class="product-add-rt">
+						<div class="lishen">立省￥<em>1220.00</em><i class="bt-col"></i></div>
+						<div class="taocan">
+							<span class="label">套餐价：</span>
+							<span class="taocan-num">￥<em>34.00</em></span>
+						</div>
+						<div class="taocan-old-price">
+							<span>原价：￥<em>2244.00</em></span>
+						</div>
+						<button class="buy-btn">立即购买</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="product-detail clearfix">
+		<div class="product-detail-lf">
+			<div class="about-class clearfix">
+				<h3><i></i>相关分类</h3>
+				<div class="about-class-list clearfix">
+					<a href="javascript:;">滋补调滋补调养滋补调养养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+				</div>
+			</div>
+			<div class="other-class">
+				<h3><i></i>同类其他品牌</h3>
+				<div class="other-class-list clearfix">
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+					<a href="javascript:;">滋补调养</a>
+				</div>
+			</div>
+			<div class="they-care clearfix">
+				<h3><i></i>买了该商品的还看过</h3>
+				<div class="goods-cm-item">
+					<i><img src="images/pro_1.jpg" alt=""/></i>
+					<p>钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+					<span>￥<em>22.00</em></span>
+				</div>
+				<div class="goods-cm-item">
+					<i><img src="images/pro_1.jpg" alt=""/></i>
+					<p>钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+					<span>￥<em>22.00</em></span>
+				</div>
+				<div class="goods-cm-item">
+					<i><img src="images/pro_1.jpg" alt=""/></i>
+					<p>钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+					<span>￥<em>22.00</em></span>
+				</div>
+				<div class="goods-cm-item">
+					<i><img src="images/pro_1.jpg" alt=""/></i>
+					<p>钙尔奇D 碳酸钙D3咀嚼片(Ⅱ) 300mg*30片</p>
+					<span>￥<em>22.00</em></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-detail-rt">
+			<div class="p-detail-tab">
+				<a href="javascript:;" class="active">商品详情</a>
+				<a href="javascript:;">说明书</a>
+			</div>
+			<div class="p-detail-cont">
+				<!-- 以下是第 1 块内容 -->
+				<div class="p-detail-cont_1 p-cont active">
+					<div class="product-info-text">
+						<p>
+							<strong>商品名称：</strong>
+							<span>妈咪爱 枯草杆菌二联活妈咪爱 枯草杆菌二联活菌颗妈咪爱 枯草杆菌二联活菌颗妈咪爱 枯草杆菌二联活菌颗妈咪爱 枯草杆菌二联活菌颗菌颗粒 1g*30袋</span>
+						</p>
+						<p>
+							<strong>商品名称：</strong>
+							<span>妈咪爱 枯草杆菌二联活菌颗粒 1g*30袋</span>
+						</p>
+						<p>
+							<strong>品　　牌：</strong>
+							<span>妈咪爱</span>
+						</p>
+						<p>
+							<strong>生产厂商：</strong>
+							<span>北京韩美药品有限公司</span>
+						</p>
+						<p>
+							<strong>重　　量：</strong>
+							<span>0.05kg</span>
+						</p>
+						<p>
+							<strong>批准文号：</strong>
+							<span>国药准字S20020037(国家食药局查询)</span>
+						</p>
+					</div>
+					<div class="product-info-banner">
+						<img src="images/produc_07.jpg" alt=""/>
+					</div>
+				</div>
+				<!-- 以下是第 2 块内容 -->
+				<div class="p-detail-cont_2  p-cont">
+					<div class="product-info-text">
+						<p><strong>商品名称：</strong>妈咪爱 枯草杆菌二联活菌颗粒 1g*30袋</p>
+						<p><strong>商品名称：</strong>妈咪爱 枯草杆菌二联活菌颗粒 1g*30袋</p>
+						<p><strong>品　　牌：</strong>妈咪爱</p>
+						<p><strong>生产厂商：</strong>北京韩美药品有限公司</p>
+						<p><strong>重　　量：</strong>0.05kg</p>
+						<p><strong>批准文号：</strong>国药准字S20020037(国家食药局查询)</p>
+					</div>
+					<div class="product-info-instr">
+<!--说明书表格  开始-->
+						<table class="instructions">
+							<tr>
+								<td colspan="2">
+									白云山 禾穗速校 氨咖黄敏胶囊 12粒 说明书
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									请仔细阅读说明书并按说明使用或在药师指导下购买和使用
+								</td>
+							</tr>
+							<tr>
+								<td>【药品名称】</td>
+								<td>
+									<p>通用名称：碳酸钙D3咀嚼片(Ⅱ)</p>
+									<p>英文名称：Calcium carbonate D3 chewable tablets (Ⅱ)</p>
+									<p>汉语拼音：Tansuangai D3 Jujuepian (Ⅱ)</p>
+								</td>
+							</tr>
+							<tr>
+								<td>【成份】</td>
+								<td>
+									本品为复方制剂，每片含碳酸钙0.75克（相当于钙300毫克），维生素D3 60国际单位。辅料为：可压缩糖、桔子香精、山梨醇、甜粉、甘露
+									醇、硬脂酸镁、玉米淀粉、聚维酮K30、二氧化硅、黄色6号色靛、硬脂酸。
+								</td>
+							</tr>
+							<tr>
+								<td>【性状】</td>
+								<td>本品为橙色咀嚼片。</td>
+							</tr>
+							<tr>
+								<td>【作用类别】</td>
+								<td>本品为维生素及矿物质类非处方药药品。</td>
+							</tr>
+							<tr>
+								<td>【不良反应】</td>
+								<td>
+									<p>1．嗳气、便秘、腹胀、腹痛、腹泻、胃胀胀气、恶心和呕吐等肠胃不适。</p>
+									<p>2．过量服用可发生高钙血症，奶-碱综合征，表现为高血钙，碱中毒及肾功能不全（因服用牛奶及碳酸钙或单用碳酸钙引起）。</p>
+								</td>
+							</tr>
+							<tr>
+								<td>【注意事项】</td>
+								<td>
+									<p>  1．心肾功能不全患者慎用。</p>
+									<p>  2.如服用过量或出现严重不良反应，应立即就医。</p>
+									<p>  3.对本品过敏者禁用，过敏体质慎用。</p>
+								</td>
+							</tr>
+							<tr>
+								<td>【药物相互作用】</td>
+								<td>
+									<p>  1.本品不宜与洋地黄类药物合用。</p>
+									<p>  2.大量饮用含酒精和咖啡 因的饮料以及大量吸烟，均会抑制钙剂的吸收。　</p>
+									<p> 3.大量进食富含纤维素的食物能抑制钙的吸收，因钙与纤维素结合成不易吸收的化合物。　</p>
+								</td>
+							</tr>
+							<tr>
+								<td>【批准文号】</td>
+								<td>国药准字H10950030</td>
+							</tr>
+						</table>
+<!--说明书表格  结束-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- 优惠卷popup -->
+	<div class="popup">
+		<div class="popup-bg"></div>
+		<div class="popup-coupon">
+			<p class="close-coupon-popup"><img src="images/close_icon.png" id="close-popup"/></p>
+			<div class="coupon-content allowance active">
+				<div>
+					<p class="coupon-title">购物津贴</p>
+					<p class="coupon-details">100%刮中奖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最高88元</p>
+					<p class="validity-period">有效期：<span>7</span> 天</p>
+				</div>
+				<div>
+					<p class="integral">200积分</p>
+					<p class="coupon-btn">机会已用完</p>
+					<p class="frequency">兑奖机会：<span>0</span>次</p>
+				</div>
+				<span class="radius"></span>
+				<span class="radius"></span>
+			</div>
+			<div class="coupon-content postage">
+				<div>
+					<p class="coupon-title">5元邮费劵</p>
+					<p class="coupon-details"></p>
+					<p class="validity-period">有效期：<span>7</span> 天</p>
+				</div>
+				<div>
+					<p class="integral">200积分</p>
+					<p class="coupon-btn">机会已用完</p>
+					<p class="frequency">兑奖机会：<span>0</span>次</p>
+				</div>
+				<span class="radius"></span>
+				<span class="radius"></span>
+			</div>
+			<div class="coupon-content limit-type active">
+				<div>
+					<p class="coupon-title">￥<span>30</span><span>满139使用</span></p>
+					<p class="coupon-details"><span>限制品劵</span>仅限购买OTC部分药品使用</p>
+					<p class="validity-period">有效期：2019.02.15-2019.02.15</p>
+				</div>
+				<div>
+					<p class="coupon-btn">已领取</p>
+				</div>
+				<span class="radius"></span>
+				<span class="radius"></span>
+			</div>
+		</div>
+	</div>
+	<!-- 手机客户端悬浮显示二维码 -->
+	<ul class="mobile-client">
+		<li>
+			<img src="images/ewm-1.jpg"/>
+			<p>APP客户端下载</p>
+			<p>首单立减</p>
+			<span></span>
+		</li>
+		<li>
+			<img src="images/ewm-2.jpg"/>
+			<p>关注微信</p>
+			<p>惊喜不断</p>
+		</li>
+	</ul>
+
+	<!-- 以下是公共部分 -->
+	<footer class="footer">
+		<div class="main-center">
+			<div class="brand-list">
+				<div class="brand-item">
+					<i class="qwry-icon"></i>
+					<h3>权威荣誉</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="ppsq-icon"></i>
+					<h3>品牌授权</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="zgbz-icon"></i>
+					<h3>正规保证</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="yqrz-icon"></i>
+					<h3>药品认证</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="thwy-icon"></i>
+					<h3>退换无忧</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="sybz-icon"></i>
+					<h3>私隐包装</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="ft-menus">
+					<div class="ft-menu">
+						<h3><span class="icon-rectangle"></span>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+					<div class="ft-menu">
+						<h3><span class="icon-rectangle"></span>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+					<div class="ft-menu">
+						<h3><span class="icon-rectangle"></span>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+					<div class="ft-menu">
+						<h3><span class="icon-rectangle"></span>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+					<div class="ft-menu">
+						<h3><span class="icon-rectangle"></span>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+				</div>
+
+				<div class="ft-ewm">
+					<div class="ft-ewm-item">
+						<span>手机购药</span>
+						<img src="images/ewm-1.jpg" alt=""/>
+					</div>
+					<div class="ft-ewm-item">
+						<span>微信购药</span>
+						<img src="images/ewm-2.jpg" alt=""/>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="copyright">
+			<div class="cr-menu">
+				<a href="javascript:;">关于好万家网</a>
+				<a href="javascript:;">质量信息</a>
+				<a href="javascript:;">网站地图</a>
+				<a href="javascript:;">商品地图</a>
+				<a href="javascript:;">友情链接</a>
+				<a href="javascript:;">诚征英才</a>
+				<a href="javascript:;">沪ICP备16002394号-1</a>
+			</div>
+			<p>公司司名称：XXXXXXXXXXXX有限公司  |  公司地址：上海市长宁区中山西路1001号－7楼  </p>
+			<p><span>Copyright © 2010-2015  XXX版权所有</span>
+				<img src="images/copyright_icon.png" class="copyright-icon"/>
+				<span>客服电话：4001-151-161</span></p>
+		</div>
+	</footer>
+
+	<!--药师推荐-->
+	<div class="swt-wrapper">
+		<div class="swt-right">
+			<div class="swt-right-top">
+				<i class="close-swt"></i>
+				<i><img src="images/swt_05.png"/></i>
+				<button class="online-doc">在线问诊<em class="g-right"></em></button>
+				<p>专业医生在线问诊<br/>提供病情咨询，药品咨询</p>
+			</div>
+			<div class="swt-right-bm">
+				<div class="doc-ask">药师咨询</div>
+				<div class="doc-ask-list">
+					<span class="active"><i class="doc-qs"></i></span>
+					<span><i class="doc-phone"></i></span>
+					<span><i class="doc-online"></i></span>
+					<span><i class="doc-hide"></i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script/jquery.9.1.min.js"></script>
+	<script type="text/javascript" src="script/swiper.min.js"></script>
+	<script type="text/javascript" src="script/magnifier.js"></script>
+	<script type="text/javascript" src="script/main.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('#magnifier').magnifier();
+			/*初始化swiper*/
+			var swiper_tabs = new Swiper('.swiper-tabs.swiper-container',{
+				slidesPerView: 'auto',
+			})
+			var swiper_suit = new Swiper('.swiper-suit.swiper-container',{
+				slidesPerView: 'auto',
+				observer:true,//修改swiper自己或子元素时，自动初始化swiper
+				observeParents:true//修改swiper的父元素时，自动初始化swiper
+			})
+
+			$('.product-discount .more').click(function () {
+			    if($(this).attr('data-status') === 'show'){
+			        $(this).attr('data-status','hide');
+			        $(this).html('更多<i></i>');
+			        $('.product-discount .promotion-message p:gt(1)').hide();
+				}else{
+                    $(this).attr('data-status','show');
+                    $(this).html('收起<i></i>');
+                    $('.product-discount .promotion-message p:gt(1)').show();
+				}
+
+            });
+		});
+	</script>
+
+</body>
+
+</html>

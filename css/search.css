@@ -1,0 +1,597 @@
+
+.section-4-search {
+	width: 1200px;
+	margin:0 auto;
+}
+
+.like-care {
+	width:178px;
+	border:1px solid #e5e6eb;
+	margin-top: 461px;
+	float:left;
+	margin-right: 13px;
+}
+.like-care h3 {
+	background-color: #e5e6eb;
+	height: 38px;
+	line-height: 38px;
+	color: #222;
+	font-size: 16px;
+	font-weight: bold;
+	position: relative;
+	padding-left: 12px;
+}
+.like-care h3 i {
+	position: absolute;
+	width:5px;
+	height: 17px;
+	left: -1px;
+	top:11px;
+	background-color: #036dde;
+}
+
+
+.like-care .goods-cm-item {
+	width: 100%;
+	height: auto;
+	border-right:none;
+}
+
+.product-detail-rt {
+	width: 996px;
+	float:left;
+	margin-top:20px;
+}
+.search-resart {
+	font-size: 12px;
+	position: relative;
+	float:left;
+	width: 100%;
+}
+.all-resart,.all-resart-list,.all-resart-item {
+	float:left;
+	line-height: 24px;
+}
+.all-resart:hover,.all-resart-list:hover,.all-resart-item:hover {
+	cursor: pointer;
+}
+.all-resart span {
+	float:left;
+	line-height: 26px;
+}
+.rt-icon {
+	display: block;
+	width: 6px;
+	height: 10px;
+	float:left;
+	margin: 8px 10px 0 10px;
+}
+.rt-icon:not(.rt-icon-first) {
+	margin: 8px 11px 0 14px;
+}
+.all-resart-list {
+	height: 26px;
+	border:1px solid #e5e5e5;
+	position: relative;
+	width: 106px;
+	box-sizing: border-box;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.all-resart-hide {
+	position: absolute;
+	background-color: #fff;
+    width: 84px;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    padding: 10px;
+    top: 24px;
+    left: -1px;
+    z-index: 1;
+    display: none;
+}
+
+.all-resart-hide a {
+	font-size: 12px;
+	display: block;
+	float:left;
+	line-height: 30px;
+	width: 100%;
+	text-align: center;
+}
+.all-resart-list span {
+	margin: 0 8px 0 4px;
+    font-size: 14px;
+}
+.all-resart-list .bm-icon {
+	width: 14px;
+	height: 7px;
+}
+.all-resart-item {
+	padding: 0 12px 0 15px;
+    height: 24px;
+    display: block;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+}
+.all-resart-item em {
+	color:#036dde;
+}
+.all-resart-item span {
+	float:left;
+}
+.all-resart-item .close-resart-icon {
+	display: block;
+    width: 11px;
+    height: 9px;
+    float: left;
+    margin: 7px 0 0 14px;
+}
+
+.hide-search {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 12px;
+	padding: 0 12px;
+	height: 24px;
+	line-height: 24px;
+	display: block;
+	text-align: center;
+	border:1px solid #e5e5e5;
+}
+.hide-search:hover {
+	cursor: pointer;
+}
+.hide-search span {
+	float: left;
+}
+.hide-search .top-icon {
+	display: block;
+	width: 14px;
+	height: 7px;
+	float:left;
+	margin: 9px 0 0 10px;
+}
+
+.search-sort {
+	width: 994px;
+	height: 80px;
+	border:1px solid #e5e5e5;
+	float:left;
+	margin-top: 27px;
+	background-color: #f6f6f6;
+}
+.total-cont-top {
+	width: 100%;
+	height: 40px;
+	position: relative;
+}
+.total-cont-top .active {
+	color: #036dde;
+}
+.zh-title,.hot-renqi {
+	float:left;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	color: #3f3f4d;
+	border-right: 1px solid #e5e5e5;
+	cursor: pointer;
+}
+.zh-title {
+	padding: 0 25px;
+}
+.hot-renqi span {
+	float:left;
+}
+.down-icon {
+	display: block;
+	float:left;
+	width:12px;
+	height: 6px;
+	margin-top: 17px;
+    margin-left: 8px;
+}
+.up-icon {
+	display: block;
+	float:left;
+	width:12px;
+	height: 6px;
+	margin-top: 9px;
+}
+.hot-renqi {
+	position: relative;
+}
+.hot-price span {
+	padding-right: 24px;
+}
+.hot-price .up-icon {
+	position: absolute;
+	right: 25px;
+	top: 4px;
+}
+.hot-price .down-icon {
+	position: absolute;
+	right: 25px;
+	top: 6px;
+	margin-top: 15px;
+}
+.price-bt {
+	position: relative;
+	float:left;
+	padding: 8px 0 0 15px;
+}
+.price-bt .price-1 {
+	width: 34px;
+	height: 24px;
+	border:1px solid #e5e5e5;
+	padding: 0 10px 0 20px;
+	float:left;
+}
+.price-bt span {
+	float:left;
+	margin: 4px 10px 0;
+	margin: 13px 6px 0;
+    width: 7px;
+    border-top: 1px solid;
+}
+.price-bt .price-2 {
+	width: 34px;
+	height: 24px;
+	border:1px solid #e5e5e5;
+	padding: 0 10px 0 20px;
+	float:left;
+}
+.price-bt .bi-icon-1 {
+	color:#bcbfc8;
+	position: absolute;
+	left: 24px;
+	top: 15px;
+}
+.price-bt .bi-icon-2 {
+	color:#bcbfc8;
+	position: absolute;
+	left: 110px;
+	top: 15px;
+}
+
+.total-shopping {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 40px;
+	color: #3f3f4d;
+}
+.total-title {
+	float:left;
+	line-height: 40px;
+	padding-right: 10px;
+	border-right: 1px solid #e5e5e5;
+}
+.total-title em {
+	color:#036dde;
+}
+.total-page {
+	float:left;
+	line-height: 40px;
+	padding: 0 10px;
+	border-right: 1px solid #e5e5e5;
+}
+.page-index {
+	color: #036dde;
+}
+.total-prev {
+	float:left;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 15px;
+	border-right: 1px solid #e5e5e5;
+	cursor: pointer;
+}
+.total-prev-icon {
+	display: block;
+	width: 9px;
+	height: 15px;
+	margin-top: 15px;
+}
+.total-next {
+	float:left;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 15px;
+	cursor: pointer;
+}
+.total-next-icon {
+	display: block;
+	width: 9px;
+	height: 15px;
+	margin-top: 15px;
+}
+.total-cont-bm {
+	border-top: 1px solid #e5e5e5;
+	padding: 12px 0 0 25px;
+	height: 28px;
+	position: relative;
+	color: #3f3f4d;
+}
+.total-check {
+	float:left;
+	margin-right: 40px;
+	display: flex;
+	align-items: center;
+}
+.total-check .t-check {
+	height: 12px;
+	width: 12px;
+	border: 1px solid #bcbfc8;
+	display: inline-block;
+	background-color: #fff;
+	margin-right: 9px;
+	border-radius: 2px;
+}
+.total-check .t-check input {
+    width: 12px;
+	height: 12px;
+	display: none;
+}
+.total-search {
+	right: 15px;
+	margin-top: -5px;
+	position: absolute;
+}
+.total-search-input {
+	height:23px;
+	width: 150px;
+	padding:0 10px;
+	float:left;
+	margin-right: 10px;
+	border: 1px solid #e5e5e5;
+}
+.total-search-input::placeholder {
+	color: #c6c8d0;
+	font-size: 12px;
+}
+.total-search .total-cf-btn {
+	height: 23px;
+	background-color: #bcbfc8;
+	color:#fff;
+	border:none;
+	width: 46px;
+	cursor: pointer;
+}
+.search-items-box {
+	width: 100%;
+	margin-top: 10px;
+}
+.search-item {
+	width:240px;
+	height: 320px;
+	float:left;
+	border:1px solid #fff;
+	margin-top: 10px;
+	padding-bottom:20px;
+	margin-right: 9px;
+	position: relative;
+}
+.search-item:nth-child(4n+0) {
+	margin-right: 0;
+}
+.search-item:hover {
+	border:1px solid #dcdcdc;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+.search-item:hover .search-item-text p {
+	height: auto;
+}
+.search-item:hover .search-item-text .search-item-price .cang {
+	display: flex;
+}
+.search-item .search-item-img {
+	width: 238px;
+	height: 220px;
+	position: absolute;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.search-item .search-item-img img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.search-item .search-item-text {
+	padding: 0 20px;
+	position: relative;
+	top: 238px;
+}
+.search-item .search-item-text p {
+	color: #3f3f4d;
+	overflow: hidden;
+	line-height: 16px;
+}
+.search-item-price {
+	margin-top: 15px;
+}
+.search-item-price .price {
+	color:#ed4529;
+	font-size: 16px;
+	float:left;
+}
+.search-item .collect-container{
+	height: 20px;
+	width: 50px;
+	position: absolute;
+	right: 22px;
+	bottom: 35px;
+	align-items: center;
+	display: none;
+	cursor: pointer;
+}
+.search-item:hover .collect-container{
+	display: flex;
+}
+.search-item .collect-container .icon-collect{
+	width: 18px;
+	height: 18px;
+	background: url("../images/形状 49.png") center no-repeat;
+	background-size: contain;
+	margin-right: 5px;
+}
+.search-item .collect-container .collect-text{
+	font-size: 12px;
+	color: #83868a;
+}
+
+.cang {
+	float:right;
+	display: none;
+	align-items: center;
+}
+.cang-star {
+	display: block;
+	width: 19px;
+	height: 18px;
+	float: left;
+	margin-right: 5px;
+}
+.cang:hover {
+	cursor: pointer;
+}
+
+
+.search-infor {
+	float:left;
+	width: 100%;
+	margin-top: 24px;
+}
+.search-infor-list {
+	line-height: 40px;
+	padding-left: 8px;
+	border-bottom: 1px dashed #e0e0e0;
+}
+.search-infor-list em {
+	margin-right: 28px;
+	cursor: pointer;
+}
+.search-infor-title {
+	color: #3f3f4d;
+	display: block;
+	width: 92px;
+	float:left;
+	font-weight: bold;
+}
+.more-ji {
+	float:right;
+	display: block;
+	height: 20px;
+	border:1px solid #e5e5e5;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	padding:0 20px  0 10px;
+	margin-top: 10px;
+	position: relative;
+	cursor: pointer;
+}
+.more-down-icon {
+	display: block;
+	width: 6px;
+	height: 10px;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+.zh-title {
+	color: #3f3f4d;
+}
+.cang-complete {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -118px -189px;
+}
+.hao-down-icon {
+	background-image: url(../images/sprite-arrow.png);
+	background-position: 0px -100px;
+	display: block;
+	float: left;
+	width: 9px;
+	height: 15px;
+	margin-top: 15px;
+	margin-left: 6px;
+}
+.hao-down-icon-active {
+	background-image: url(../images/sprite-arrow.png);
+	background-position: 0px -120px;
+	display: block;
+	float: left;
+	width: 9px;
+	height: 15px;
+	margin-top: 15px;
+	margin-left: 6px;
+}
+.title-active {
+	background-color: red;
+	color: white;
+}
+.hao-up-icon {
+	position: absolute;
+	right: 25px;
+	top: 4px;
+	display: block;
+	float: left;
+	width: 12px;
+	height: 6px;
+	margin-top: 9px;
+	background-image: url(../images/sprite-arrow.png);
+	background-position: -8px -100px;
+}
+.hao-up-icon-active {
+	position: absolute;
+	right: 25px;
+	top: 4px;
+	display: block;
+	float: left;
+	width: 12px;
+	height: 6px;
+	margin-top: 9px;
+	background-image: url(../images/sprite-arrow.png);
+	background-position: -8px -120px;
+}
+.hao-down {
+	position: absolute;
+	right: 25px;
+	top: 6px;
+	margin-top: 15px;
+	display: block;
+	float: left;
+	width: 12px;
+	height: 6px;
+	margin-top: 17px;
+	margin-left: 8px;
+	background-image: url(../images/sprite-arrow.png);
+	background-position: -8px -110px;
+}
+.hao-down-active {
+	position: absolute;
+	right: 25px;
+	top: 6px;
+	margin-top: 15px;
+	display: block;
+	float: left;
+	width: 12px;
+	height: 6px;
+	margin-top: 17px;
+	margin-left: 8px;
+	background-image: url(../images/sprite-arrow.png);
+	background-position: -8px -130px;
+}
+
+
+
